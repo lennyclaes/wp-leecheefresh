@@ -1,0 +1,81 @@
+/* 
+Theme Name: Leechee Fresh
+Author: Lenny Claes
+Version: 1.0.6
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fefefe;
+    min-height: 100%;
+    height: 100%;
+    display: block;
+}
+
+.main {
+    padding: 150px 15% 50px 15%;
+    min-height: inherit;
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fjalla One', Arial, Helvetica, sans-serif;
+    margin: 20px 0;
+}
+
+p, a, button, label, ol, ul, input, textarea, select, cite, figcaption {
+    font-family: 'Manrope', Arial, Helvetica, sans-serif;
+}
+
+p, button, label, img, code {
+    margin: 10px 0;
+}
+
+ol, ul {
+    margin: 10px 20px;
+}
+
+code {
+    font-family: 'Source Code Pro', Arial, Helvetica, sans-serif;
+    padding: 10px;
+    background: #333333;
+    color: #fefefe;
+    display: inline-block;
+}
+
+.wp-block-column {
+    text-align: center;
+}
+
+.site-footer {
+    background: #333333;
+    color: #fefefe;
+    width: 100%;
+    padding: 25px;
+    text-align: center;
+    display: block;
+}
+
+.wp-block-file__button:hover {
+    background: #ed8721 !important;
+}
+
+@media (max-width: 760px) {
+    .main {
+        padding: 50px 15% 50px 15%;
+    }
+
+    iframe {
+        width: 100%;
+    }
+}

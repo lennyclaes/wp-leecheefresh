@@ -1,0 +1,121 @@
+.posts {
+    display: grid;
+    grid-template-columns: repeat(3, 33% [col-start]);
+    gap: 30px;
+}
+
+.post {
+    transition: all ease-in 0.2s;
+    z-index: 2;
+}
+
+.post-link {
+    justify-self: stretch;
+    color: #333333;
+    text-decoration: none;
+}
+
+.post-info:after {
+    content: '';
+    width: 100%;
+    height: 0%;
+    background: #ffa500;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all ease-in 0.2s;
+    z-index: -1;
+    clip-path: polygon(0px 0%, 100% 0px, 100% 75%, 0px 92%);
+}
+
+.post-info:before {
+    content: '';
+    width: 100%;
+    height: 0%;
+    background: #333333;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all ease-in 0.2s;
+    z-index: -2;
+    clip-path: polygon(0px 0%, 100% 0px, 100% 83%, 0px 100%);
+}
+
+.post-info {
+    padding: 10px 5px 15px 5px;
+    position: relative;
+    z-index: 10;
+    display: block;
+    transition: 0.2s ease-in;
+}
+
+.post:hover .post-info:after, .post:hover .post-info:before {
+    height: 100%;
+}
+
+.post h2 a, .post h2 a:visited {
+    text-decoration: none;
+    color: #333333;
+    transition: linear 0.2s;
+}
+
+.post h2 a:hover, .post h2 a:visited:hover {
+    color: #ed8721;
+}
+
+.post-categories {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.post-category {
+    color: #ed8721;
+    display: block;
+    margin: 0 10px 0 0;
+}
+
+.button {
+    padding: 5px;
+    background: #ed8721;
+    margin: 5px 10px;
+    margin-left: 0;
+    display: block;
+}
+
+.post-thumbnail {
+    height: 300px;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+}
+
+.default-post-thumbnail {
+    height: 300px;
+    overflow: hidden;
+    background: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.default-post-thumbnail svg {
+    width: 96px;
+    fill: #8c8c8c;
+}
+
+.post-thumbnail img {
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    bottom: 0%;
+}
+
+@media (max-width: 760px) {
+    .posts {
+        display: block;
+    }
+}
